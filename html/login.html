@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Iniciar Sesión</h2>
+        <form id="login-form">
+            <div class="input-container">
+                <label for="username">Nombre de usuario</label>
+                <input type="text" id="username" required>
+            </div>
+            <div class="input-container">
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" required>
+            </div>
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+        <p id="error-message" class="hidden">Credenciales incorrectas. Inténtalo de nuevo.</p>
+    </div>
+
+    <script src="../javasript/login.js"></script>
+</body>
+</html>

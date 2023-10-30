@@ -1,0 +1,24 @@
+/* Estilo para la barra de navegación */
+.navbar {
+    background-color: #333; /* Color de fondo de la barra de navegación */
+    overflow: hidden;
+}
+
+.navbar a {
+    float: left; /* Coloca los elementos de navegación en línea */
+    display: block; /* Hace que los elementos de navegación sean bloques */
+    color: white; /* Color de texto */
+    text-align: center; /* Centra el texto */
+    padding: 14px 16px; /* Relleno en los elementos de navegación */
+    text-decoration: none; /* Quita la subrayado de los enlaces */
+}
+
+.navbar a:hover {
+    background-color: #ddd; /* Color de fondo al pasar el cursor por encima */
+    color: black; /* Cambia el color del texto al pasar el cursor por encima */
+}
+
+/* Estilo para el contenido principal */
+.content {
+    padding: 20px; /* Relleno en el contenido principal para evitar superposición con la barra de navegación */
+}
