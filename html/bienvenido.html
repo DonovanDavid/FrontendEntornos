@@ -1,19 +1,102 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <link rel="stylesheet" type="text/css" href="../css/bienvenido.css">
-</head>
-<body>
-    <div class="navbar">
-        <a href="#inicio">Inicio</a>
-        <a href="#servicios">Servicios</a>
-        <a href="#acerca">Acerca de</a>
-        <a href="#contacto">Contacto</a>
-    </div>
+<html lang="en">
 
-    <div class="content">
-        <h1>Bienvenido a mi sitio web</h1>
-        <p>Este es un ejemplo de una barra de navegación simple.</p>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <title>Front Ecommerce</title>
+  <script src="../javasript/backProvedores.js"></script>
+  <link rel="stylesheet" type="text/css" href="../css/bienvenido.css">
+  <script>
+    window.onload = function () {
+      console.log("Tu archivo JavaScript está conectado a tu página HTML.");
+    }
+  </script>
+  <style>
+    body {
+      background-color: #f7f6f6;
+    }
+
+    table thead {
+      background-color: #0a4f70;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="navbar">
+    <a href="#inicio">Inicio</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#acerca">Acerca de</a>
+    <a href="#contacto">Contacto</a>
+  </div>
+  <div class="container mt-3 shadow-lg p-3 mb-5 bg-body rounded">
+    <button id="btnCrear" type="button" class="btn btn-primary" data-bs-toggle="modal">Crear</button>
+    <table id="tabla" class="table mt-2 table-bordered table-striped">
+      <thead>
+        <tr class="text-center">
+          <!--th deben tener el nombre de las columnas de los parametros-->
+          <th scope="col">ID</th>
+          <th scope="col">Ciudad</th>
+          <th scope="col">Direccion</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Telefono</th>
+          <th scope="col">Nit</th>
+          <th scope="col">Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+
+
+  <div class="modal fade" id="modalEditar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!--Se debe poner los campos de editar en esta parte-->
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">New message</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="ciudad" class="col-form-label">Ciudad:</label>
+              <input type="text" class="form-control" id="ciudad">
+            </div>
+            <div class="mb-3">
+              <label for="direccion" class="col-form-label">Direccion</label>
+              <input type="text" class="form-control" id="direccion">
+            </div>
+            <div class="mb-3">
+              <label for="nombre" class="col-form-label">Nombre</label>
+              <input type="text" class="form-control" id="nombre">
+            </div>
+            <div class="mb-3">
+              <label for="telefono" class="col-form-label">Telefono:</label>
+              <input type="text" class="form-control" id="telefono">
+            </div>
+            <div class="mb-3">
+              <label for="nit" class="col-form-label">Nit:</label>
+              <input type="text" class="form-control" id="nit">
+            </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="submit" class="btn btn-primary">Guardar</button>
+        </div>
+        </form>
+      </div>
     </div>
+  </div>
 </body>
+
 </html>
